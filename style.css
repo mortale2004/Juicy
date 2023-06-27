@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500&display=swap');
+
+
+/* Changing Default Settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+/* Changes the styles of root Element */
+:root{
+    font-size: 15px;
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+    --primary-color: #000;
+}
+
+
+/* Utility Class */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Whole Page Wrapper */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Each Section in Container */
+
+
+
+
+/* ************************************************************************* */
+/* NavBar Sytling */
+.section-1{
+    grid-column: span 3;
+    height: 100%;
+}
+
+.section-1 nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position:fixed;
+    z-index: 10;    
+    width: 100%;
+}
+#hamBurger{
+    display: none;
+}
+
+nav h1{
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    list-style-type: none;
+    padding: 0 0.5rem;
+}
+nav ul li a{
+    font-weight: bold;
+}
+
+.leftNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftNav h1{
+    margin: 0 0 0 1rem;
+}
+.rightNav a i{
+    padding: 0 1rem;
+}
+
+
+
+
+/* ************************************************************************ */
+/* Second Section */
+.section-2{
+    align-self: center;
+    padding-left: 2rem;
+    flex-direction: column;
+    margin: 10vh 0 0 0;
+}
+
+.section-2 p{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.section-2 h1{
+    font-size: 3.5rem;
+}
+.animateH1{
+    animation: animateH1 0.51s ease-in 1 forwards;
+}
+@keyframes animateH1 {
+    0%{
+        opacity: 0.2;
+        transform:  translateY(30px);
+    }
+    50%{
+        opacity:  0.8;
+        transform:  translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(0px);
+    }
+}
+.priceCon{
+    display: flex;
+    align-items: center;
+}
+.section-2 div h3{
+    font-size: 2rem;
+}
+.section-2  div i{
+    color: white;
+    background-color: black;
+    padding: 0.7rem;
+    border-radius: 50%;
+    margin: 0 0 0 1rem;
+}
+
+
+/* ********************************************************************** */
+/* Section 3 sytling - Current Can and Next can With Buttons */
+.section-3{
+    grid-row: span 2;
+    grid-column: span 2;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0 1.5rem 5rem;
+    position: relative;
+    margin: 9vh 0 0 0;
+}
+
+.imageCon{
+    background: url("/images/bg1.jpg");
+    border-radius: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: -5rem 0 0 0;
+    padding: 0 3rem;
+}
+
+.imageCon img{
+    position: relative;
+    top: 6rem;
+    width: 90%;
+}
+.animateCan{
+    animation: canAnimate 0.7s linear 1 ;
+}
+
+@keyframes canAnimate {
+    0%{
+        opacity: 0.2;
+        transform:  translate3d(20px, 0px, 1rem);
+    }
+    50%{
+        opacity:  0.8;
+        transform:  translate3d(10px, 0px, 1rem);
+    }
+    100%{
+        opacity: 1;
+        transform:  translate3d(0px, 0px, 0rem);
+    }
+}
+
+/* Sytling of Next Can, Current Element and Buttons */
+.rightPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    height: 100%;
+    padding: 3rem 3rem 3rem 0;
+}
+.rightPart h5{
+    font-size: 1.3rem;
+}
+
+.centerRightPart img{
+    width: 10rem;
+    position: absolute;
+    right: -10rem;
+    z-index: 12;
+    transform: translate(-50%, -50%);
+}
+.animateNextCan{
+    animation: canAnimate2 1s linear 1;
+}
+@keyframes canAnimate2 {
+    0%{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    50%{
+        opacity:  0.3;
+        transform: translate(-150%, -50%);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-250%, -50%);
+    }
+}
+.bottomRightPart i{
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 50%;
+}
+.bottomRightPart i:hover{
+    background-color: black;
+    color: white;
+}
+
+/* ************************************************************************** */
+/* Section 4 Styling - Design and shop now section */
+.section-4{
+    align-self: center;
+    padding-left: 2rem;
+}
+.section-4 h3{
+    margin: 8px 0;
+}.section-4 p{
+    color: rgba(0, 0, 0, 0.622);
+}.section-4 a h1{
+    margin: 5px 0;
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width:900px) {
+    .section-2{
+        grid-column: span 3;
+        justify-self: center;
+    }
+    
+    .section-3{
+        grid-column: span 3;
+        height: 100vh;
+        margin: 0;
+   }
+   .section-4{
+    grid-column: span 3;
+    justify-self: center;
+    padding: 0 0 3rem 0;
+   }
+}
+
+@media screen and (max-width: 700px) {
+    .centerRightPart{
+        display: none;
+    }
+    .section-2{
+        padding: 70px;
+    }
+    .section-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .imageCon{
+
+        padding: 0;
+    }
+    .imageCon img{
+        width: 70%;
+    }
+    .rightPart{
+        width: 100%;
+        position: absolute;
+    }
+    #leftBtn{
+        position: absolute;
+        top: 50%;
+        left: 2%;
+    }
+    #rightBtn
+    {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+    }
+    #hamBurger{
+        display: block;
+    }
+    .centerNav{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        transition: all 2s;
+        transform: translateY(-8rem);
+    }
+    .centerNav ul{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+    .centerNav ul li{
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0.3rem;
+    }
+
+
+
+}
